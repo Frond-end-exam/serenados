@@ -3,4 +3,33 @@
   height: 575px;
   border: 1px solid black;
   background-image: url("building.gif");
+  display: none;
+}
+#menu {
+	width:90%;
+	height:570px;
+	background-image: url("building.gif");
+	background-repeat: no-repeat;
+/*	position: absolute;
+*/}
+#start {
+	position: relative;
+	top: 200px;
+	padding: 15px;
+	margin:auto;
+	display: block;
+	
+}
+
+#buttonDisc {
+
+	position: relative;
+	top: 250px;
+	margin:auto;
+	display: block;
+	padding: 15px;
+}
+#disc {
+	display: none;
+	padding-top:  300px;
 }

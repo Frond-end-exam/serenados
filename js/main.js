@@ -124,6 +124,32 @@
             }
             ball.draw();
         }
+         if ((ball.y) > (paddleY - paddleHeight) && (ball.x + ball.radius) > paddleX && (ball.x - ball.radius) < (paddleX + paddleWidth) && ball.color == "#0095DD") {
+            lives--;
+            ball.x = getRandomX();
+            ball.y = getRandomY();
+            if (randomNumber === 1) {
+                ball.color = "red";
+            } else {
+                ball.color = "#0095DD";
+            }
+            ball.draw();
+        }
+
+        if (lives === 0) {
+            alert('Game Over');
+        }
     }
-    setInterval(update, 10);
+
+    document.getElementById('start').onclick = function() {
+        document.getElementById('menu').style.display= 'none';
+        document.getElementById('canvas').style.display= 'block';
+        setInterval(update, 10);
+    };
+
+    document.getElementById('buttonDisc').onclick = function() {
+        document.getElementById('disc').style.display= 'block';
+
+    };
+    
 })();
