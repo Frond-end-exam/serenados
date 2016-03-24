@@ -1,0 +1,6 @@
+#canvas {
+  width: 566px;
+  height: 575px;
+  border: 1px solid black;
+  background-image: url("building.gif");
+}
