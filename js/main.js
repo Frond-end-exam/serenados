@@ -2,8 +2,8 @@
     "use strict";
     var canvas = document.getElementById("canvas"),
         ctx = canvas.getContext("2d"),
-        paddleHeight = 10,
-        paddleWidth = 75,
+        paddleHeight = 30,
+        paddleWidth = 40,
         paddleX = (canvas.width - paddleWidth) / 2,
         paddleY = canvas.height - paddleHeight,
         rightPressed = false,
@@ -41,7 +41,7 @@
     //---------------
     function getRandomY() {
         var randomNumber = Math.floor((Math.random() * 2) + 1);
-        y = b1 * randomNumber;
+        y = -100 + b1 * randomNumber;
         return y;
     }
     //--------------
