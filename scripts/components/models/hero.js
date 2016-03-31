@@ -20,21 +20,23 @@ define(['components/models/canvas'], function(Canvas) {
             leftPressed = false;
         }
     }
+    var img = new Image();
+    img.src = "design/Moving units/img-man.png";
     var hero = {
         height: 30,
         width: 40,
         X: (Canvas.canvas.width - 30) / 2,
-        Y: Canvas.canvas.height - 40,
+        Y: Canvas.canvas.height - 140,
         draw: function() {
             Canvas.ctx.beginPath();
-            Canvas.ctx.rect(this.X, this.Y, this.width, this.height);
-            Canvas.ctx.fillStyle = "red";
+            Canvas.ctx.drawImage(img, this.X, this.Y);
+            //Canvas.ctx.fillStyle = "red";
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
-            if (rightPressed && this.X < Canvas.canvas.width - this.width / 2) {
-                this.X += 1.8;
-            } else if (leftPressed && this.X > 0 - this.width / 2) {
-                this.X -= 1.8;
+            if (rightPressed && this.X < Canvas.canvas.width - this.width) {
+                this.X += 2;
+            } else if (leftPressed && this.X > 0 - this.width) {
+                this.X -= 2;
             }
         }
     };
