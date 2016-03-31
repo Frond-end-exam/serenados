@@ -1,10 +1,12 @@
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas) {
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', '../menuSound', '../gameOverSound'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound) {
     "use strict";
+
     var W = Canvas.canvas.width,
         H = Canvas.canvas.height;
 
     function update() {
         var randomNumber = Math.floor((Math.random() * 2) + 1);
+        
         clearCanvas();
         score.draw();
         lives.draw();
@@ -45,7 +47,9 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
         }
         if (lives.count === 0) {
             alert('Game Over');
-            document.location.reload();
+            gameOverSound();
+            // document.location.reload();
+            clearInterval(update);
         }
     }
     document.getElementById('start').onclick = function() {
