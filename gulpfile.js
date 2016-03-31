@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
-	stylish = require('jshint-stylish')
+	stylish = require('jshint-stylish');
 
 	// concat = require('gulp-concat')
 	// minify = require('gulp-minify'),

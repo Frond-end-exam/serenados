@@ -1,12 +1,11 @@
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', '../menuSound', '../gameOverSound'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound) {
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', '../menuSound', '../gameOverSound', '../gameSound'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound) {
     "use strict";
-
+    menuSound();
     var W = Canvas.canvas.width,
         H = Canvas.canvas.height;
 
     function update() {
         var randomNumber = Math.floor((Math.random() * 2) + 1);
-        
         clearCanvas();
         score.draw();
         lives.draw();
@@ -46,16 +45,24 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             ball.draw();
         }
         if (lives.count === 0) {
-            alert('Game Over');
             gameOverSound();
-            // document.location.reload();
-            clearInterval(update);
+            clearInterval(gameInterval);
+            setTimeout(function () {
+                window.location.reload();
+            }, 2000);
         }
     }
+
+
+    var gameInterval = setInterval(function() {
+        update();
+    }, 10);
+
+
     document.getElementById('start').onclick = function() {
         document.getElementById('menu').style.display = 'none';
         document.getElementById('canvas').style.display = 'block';
-        setInterval(update, 10);
+        gameSound();
     };
     document.getElementById('buttonDisc').onclick = function() {
         document.getElementById('disc').style.display = 'block';

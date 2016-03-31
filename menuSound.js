@@ -3,7 +3,7 @@ define(function() {
         'use strict';
         soundManager.onready(function() {
             var menuSound = soundManager.createSound({
-                url: 'css/sounds/desperados.mp3'
+                url: 'css/sounds/menu.mp3'
             });
             menuSound.play({
                 loops: 5
@@ -14,4 +14,4 @@ define(function() {
         });
     };
     return menuSound;
-})
+});
