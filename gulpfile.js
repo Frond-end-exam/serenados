@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 	// del = require('del');
 
 gulp.task('jshint', function () {
-	return gulp.src('js/*.js')
+	return gulp.src(['./*.js', 'scripts/components/functions/*.js', 'scripts/components/models/*.js', 'scripts/*.js'])
 		.pipe(jshint())
 		.pipe(jshint.reporter(stylish))
 		.pipe(jshint.reporter('fail'));
@@ -34,6 +34,6 @@ gulp.task('jshint', function () {
 //});
 
 gulp.task('watch', function () {
-	gulp.watch(['js/*.js'], ['jshint']);
+	gulp.watch(['./*.js', 'scripts/components/functions/*.js', 'scripts/components/models/*.js', 'scripts/*.js'], ['jshint']);
 	gulp.watch(['./scss/*.scss'], ['scss']);
 });
