@@ -32,9 +32,9 @@ define(['components/models/canvas'], function(Canvas) {
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
             if (rightPressed && this.X < Canvas.canvas.width - this.width / 2) {
-                this.X += 2;
+                this.X += 1.8;
             } else if (leftPressed && this.X > 0 - this.width / 2) {
-                this.X -= 2;
+                this.X -= 1.8;
             }
         }
     };

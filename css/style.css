@@ -10,7 +10,11 @@
 	height:570px;
 	background-image: url("building.gif");
 	background-repeat: no-repeat;
+<<<<<<< HEAD
 	/*position: absolute;*/
+=======
+	position: absolute;
+>>>>>>> a99b18333ef6ede3a54279bf80f79285649289f5
 }
 #start {
 	position: relative;

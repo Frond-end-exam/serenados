@@ -43,8 +43,9 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             }
             ball.draw();
         }
-        if (lives === 0) {
+        if (lives.count === 0) {
             alert('Game Over');
+            document.location.reload();
         }
     }
     document.getElementById('start').onclick = function() {
