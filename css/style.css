@@ -1,39 +1,80 @@
+
+body{
+padding:0px;
+margin:0px;
+}
+#main{
+	width: 100%;
+    min-height: 650px;
+	background-image: url("img-main-backgroung.gif");
+	background-size: cover;
+	-webkit-background-size: cover;
+
+}
 #canvas {
   width: 566px;
-  height: 575px;
-  border: 1px solid black;
-  background-image: url("building.gif");
+  height: 566px;
+  background-image: url("building2.gif");
   display: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 #menu {
-	width:90%;
-	height:570px;
-	background-image: url("building.gif");
+	width: 100%;
+    min-height: 650px;
+	background-image: url("img-menu-background.gif");
+	background-size: cover;
+	margin-left: auto;
+  	margin-right: auto;
 	background-repeat: no-repeat;
-<<<<<<< HEAD
-	/*position: absolute;*/
-=======
-	position: absolute;
->>>>>>> a99b18333ef6ede3a54279bf80f79285649289f5
 }
-#start {
+
+.img-menu-girl{
 	position: relative;
-	top: 200px;
-	padding: 15px;
-	margin:auto;
 	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#start {
+	position: absolute;
+	top: 397px;
+	padding: 15px;
+	display: block;
+	background:url(../design/Menu/play-button.gif);
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 98px;
+    border: none;
+    outline:none;
 	
 }
 
 #buttonDisc {
 
-	position: relative;
-	top: 250px;
+	position: absolute;
+	top: 500px;
 	margin:auto;
 	display: block;
 	padding: 15px;
+	background:url(../design/Menu/img-controls-button.gif);
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 94px;
+    border: none;
+    outline:none;
 }
 #disc {
 	display: none;
 	padding-top:  300px;
+}
+#mute {
+	position: absolute;
+	background:url(../design/Soundbtns/btn-snd-on.gif);
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 94px;
+    border: none;
+    outline:none;
+
 }
