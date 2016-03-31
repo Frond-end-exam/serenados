@@ -1,0 +1,16 @@
+{
+    "dependencies": {
+    "body-parser": "",
+    "gulp": "~3.9.1",
+    "gulp-jshint": "~1.8.4",
+    "jshint-stylish": "~2.1.0",
+    "gulp-watch": "~4.3.5",
+    "gulp-sass": "~2.2.0",
+    "del": "~2.2.0",
+    "gulp-uglify": "~1.5.3",
+    "gulp-copy": "~0.0.2",
+    "gulp-concat": "~2.6.0",
+    "gulp-minify": "~0.0.5",
+    "gulp-util": "~3.0.7"
+  }
+}
