@@ -1,5 +1,6 @@
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', '../menuSound', '../gameOverSound', '../gameSound'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound) {
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound, menu) {
     "use strict";
+    menu();
     menuSound();
     var W = Canvas.canvas.width,
         H = Canvas.canvas.height;
@@ -53,18 +54,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
         }
     }
 
-
     var gameInterval = setInterval(function() {
         update();
     }, 10);
-
-
-    document.getElementById('start').onclick = function() {
-        document.getElementById('menu').style.display = 'none';
-        document.getElementById('canvas').style.display = 'block';
-        gameSound();
-    };
-    document.getElementById('buttonDisc').onclick = function() {
-        document.getElementById('disc').style.display = 'block';
-    };
 });

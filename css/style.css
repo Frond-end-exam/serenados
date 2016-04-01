@@ -1,79 +1,97 @@
-
-body{
-padding:0px;
-margin:0px;
+body {
+    padding: 0px;
+    margin: 0px;
 }
-#main{
-	width: 100%;
+
+#main {
+    width: 100%;
+    position: relative;
     min-height: 650px;
-	background-image: url("img-main-backgroung.gif");
-	background-size: cover;
-	-webkit-background-size: cover;
-
+    background-image: url("img-main-backgroung.gif");
+    background-size: cover;
+    -webkit-background-size: cover;
 }
+
 #canvas {
-  width: 566px;
-  height: 566px;
-  background-image: url("building2.gif");
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
+    width: 566px;
+    height: 566px;
+    background-image: url("building2.gif");
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 #menu {
-	width: 100%;
+    width: 100%;
     min-height: 650px;
-	background-image: url("img-menu-background.gif");
-	background-size: cover;
-	margin-left: auto;
-  	margin-right: auto;
-	background-repeat: no-repeat;
+    background-image: url("img-menu-background.gif");
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
 }
-.img-menu-girl{
-	position: relative;
-	display: block;
+
+.img-menu-girl {
+    position: relative;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 #start {
-	position: absolute;
-	top: 397px;
-	padding: 15px;
-	display: block;
-	background:url(../design/Menu/play-button.gif);
+    position: absolute;
+    top: 397px;
+    padding: 15px;
+    display: block;
+    background: url(../design/Menu/play-button.gif);
     background-repeat: no-repeat;
     width: 147px;
     height: 98px;
     border: none;
-    outline:none;
-	
+    outline: none;
 }
 
 #buttonDisc {
-
-	position: absolute;
-	top: 500px;
-	margin:auto;
-	display: block;
-	padding: 15px;
-	background:url(../design/Menu/img-controls-button.gif);
+    position: absolute;
+    top: 500px;
+    margin: auto;
+    display: block;
+    padding: 15px;
+    background: url(../design/Menu/img-controls-button.gif);
     background-repeat: no-repeat;
     width: 214px;
     height: 94px;
     border: none;
-    outline:none;
+    outline: none;
 }
-#disc {
-	display: none;
-	padding-top:  300px;
+
+#controls-description {
+    background: url(../design/controls-frame/controls-background.png)no-repeat;
+    display: none;
+    position: absolute;
+    width: 300px;
+    top: 400px;
+    left: 250px;
+    padding: 100px;
 }
+
 #mute {
-	position: absolute;
-	background:url(../design/Soundbtns/btn-snd-on.gif);
+    position: absolute;
+    background: url(../design/Soundbtns/btn-snd-on.gif);
     background-repeat: no-repeat;
     width: 214px;
     height: 94px;
     border: none;
-    outline:none;
+    outline: none;
+}
 
+#unmute {
+	display: none;
+    position: absolute;
+    background: url(../design/Soundbtns/btn-snd-off.gif);
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 94px;
+    border: none;
+    outline: none;
 }
