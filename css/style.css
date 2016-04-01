@@ -7,7 +7,7 @@ body {
     width: 100%;
     position: relative;
     min-height: 650px;
-    background-image: url("img-main-backgroung.gif");
+    background-image: url("../assets/images/backgrounds/img-main-backgroung.gif");
     background-size: cover;
     -webkit-background-size: cover;
 }
@@ -15,7 +15,7 @@ body {
 #canvas {
     width: 566px;
     height: 566px;
-    background-image: url("building2.gif");
+    background-image: url("../assets/images/backgrounds/building2.gif");
     display: none;
     margin-left: auto;
     margin-right: auto;
@@ -24,7 +24,7 @@ body {
 #menu {
     width: 100%;
     min-height: 650px;
-    background-image: url("img-menu-background.gif");
+    background-image: url("../assets/images/backgrounds/img-menu-background.gif");
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
@@ -43,7 +43,7 @@ body {
     top: 397px;
     padding: 15px;
     display: block;
-    background: url(../design/Menu/play-button.gif);
+    background: url("../assets/images/menu/play-button.gif");
     background-repeat: no-repeat;
     width: 147px;
     height: 98px;
@@ -57,7 +57,7 @@ body {
     margin: auto;
     display: block;
     padding: 15px;
-    background: url(../design/Menu/img-controls-button.gif);
+    background: url("../assets/images/menu/img-controls-button.gif");
     background-repeat: no-repeat;
     width: 214px;
     height: 94px;
@@ -66,7 +66,7 @@ body {
 }
 
 #controls-description {
-    background: url(../design/controls-frame/controls-background.png)no-repeat;
+    background: url("../assets/images/controls-frame/controls-background.png")no-repeat;
     display: none;
     position: absolute;
     width: 300px;
@@ -77,7 +77,7 @@ body {
 
 #mute {
     position: absolute;
-    background: url(../design/Soundbtns/btn-snd-on.gif);
+    background: url("../assets/images/soundbtns/btn-snd-on.gif");
     background-repeat: no-repeat;
     width: 214px;
     height: 94px;
@@ -88,10 +88,18 @@ body {
 #unmute {
 	display: none;
     position: absolute;
-    background: url(../design/Soundbtns/btn-snd-off.gif);
+    background: url("../assets/images/soundbtns/btn-snd-off.gif");
     background-repeat: no-repeat;
     width: 214px;
     height: 94px;
     border: none;
     outline: none;
+}
+.lives {
+  
+padding-top: 100px;
+  width: 40px;
+  height: 60px;
+  background: url("../assets/images/moving-units/img-sombrero.png");
+
 }

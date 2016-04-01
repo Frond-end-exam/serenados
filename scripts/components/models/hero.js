@@ -21,7 +21,7 @@ define(['components/models/canvas'], function(Canvas) {
         }
     }
     var img = new Image();
-    img.src = "design/Moving-units/img-man.png";
+    img.src = "assets/images/moving-units/img-man.png";
     var hero = {
         height: 30,
         width: 40,
