@@ -1,6 +1,6 @@
 define(function() {
     "use strict";
-    var canvas = document.getElementById("canvas"),
+    var canvas = $('#canvas')[0],
         ctx = canvas.getContext("2d");
     var Canvas = {
         canvas: canvas,

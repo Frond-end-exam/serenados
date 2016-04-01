@@ -3,14 +3,12 @@ define(function() {
         'use strict';
         soundManager.onready(function() {
             var menuSound = soundManager.createSound({
-                url: 'css/sounds/menu.mp3'
+                url: 'http://freshly-ground.com/data/audio/48khz-test.mp3'
             });
             menuSound.play({
                 loops: 5
             });
-            $('#mute').click(function() {
-                soundManager.mute();
-            });
+            
         });
     };
     return menuSound;

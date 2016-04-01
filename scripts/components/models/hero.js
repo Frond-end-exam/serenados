@@ -2,8 +2,8 @@ define(['components/models/canvas'], function(Canvas) {
     "use strict";
     var rightPressed = false,
         leftPressed = false;
-    document.addEventListener("keydown", keyDownHandler, false);
-    document.addEventListener("keyup", keyUpHandler, false);
+    $(document).keydown(keyDownHandler);
+    $(document).keyup(keyUpHandler);
 
     function keyDownHandler(e) {
         if (e.keyCode == 39) {
@@ -21,7 +21,7 @@ define(['components/models/canvas'], function(Canvas) {
         }
     }
     var img = new Image();
-    img.src = "design/Moving units/img-man.png";
+    img.src = "design/Moving-units/img-man.png";
     var hero = {
         height: 30,
         width: 40,
