@@ -48,9 +48,9 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             touchCactusSound();
         }
         if (lives.count === 0) {
-            // gameOverSound();
+            gameOverSound();
             clearInterval(gameInterval);
-            gameOverMenu();
+            // gameOverMenu();
             setTimeout(function() {
                 window.location.reload();
             }, 2000);
