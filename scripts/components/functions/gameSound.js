@@ -1,6 +1,6 @@
 define(function() {
+    'use strict';
     var gameSound = function() {
-        'use strict';
         soundManager.onready(function() {
             var gameSound = soundManager.createSound({
                 url: 'assets/sounds/game.mp3'

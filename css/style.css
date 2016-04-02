@@ -38,6 +38,19 @@ body {
     margin-right: auto;
 }
 
+.game-over-menu {
+    position: relative;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    background: url('../assets/images/backgrounds/background-game-over.png');
+}
+
+.game-over-menu .menu {
+    background: url('../assets/images/game-over/img-btn-menu.png');
+}
+
 #start {
     cursor: pointer;
     position: absolute;
@@ -106,3 +119,4 @@ body {
     height: 60px;
     background: url("../assets/images/moving-units/img-sombrero.png");
 }
+
