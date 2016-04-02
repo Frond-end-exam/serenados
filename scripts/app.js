@@ -48,12 +48,11 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
         if (lives.count === 0) {
             gameOverSound();
             clearInterval(gameInterval);
-            setTimeout(function () {
+            setTimeout(function() {
                 window.location.reload();
             }, 2000);
         }
     }
-
     var gameInterval = setInterval(function() {
         update();
     }, 10);
