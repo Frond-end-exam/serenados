@@ -96,10 +96,31 @@ body {
     outline: none;
 }
 .lives {
-  
-padding-top: 100px;
-  width: 40px;
-  height: 60px;
+  width: 160px;
+  height: 40px;
+  padding-left: 16%;
+}
+.lives1 {
+  float: left;
+
+  width: 50px;
+  height: 40px;
   background: url("../assets/images/moving-units/img-sombrero.png");
 
+}
+
+.lives2 {
+  float: left;
+  width: 50px;
+  height: 40px;
+  background: url("../assets/images/moving-units/img-sombrero.png");
+}
+.lives3 {
+  float: left;
+  width: 50px;
+  height: 40px;
+  background: url("../assets/images/moving-units/img-sombrero.png");
+}
+.score {
+  background: url("../assets/images/moving-units/img-bra.png");
 }
