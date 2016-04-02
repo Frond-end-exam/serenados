@@ -12,11 +12,10 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
         vy: 1,
         draw: function() {
             Canvas.ctx.beginPath();
-            //Canvas.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
             if (ball.color == "red") {
-                Canvas.ctx.drawImage(imgBra, this.x-20, this.y);
+                Canvas.ctx.drawImage(imgBra, this.x - 20, this.y-20);
             } else {
-                Canvas.ctx.drawImage(imgCactus, this.x-20, this.y);
+                Canvas.ctx.drawImage(imgCactus, this.x - 25, this.y-20);
             }
             Canvas.ctx.fillStyle = this.color;
             Canvas.ctx.fill();

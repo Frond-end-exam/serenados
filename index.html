@@ -11,6 +11,11 @@
         <div id="main">
 
             <button id="mute">
+                Mute
+            </button>
+
+
+            <button id="mute">
             </button>
 
             <div class="lives">
@@ -30,6 +35,7 @@
             </div>
 
             <button id="unmute"></button>
+
             <div id="menu">
                 <img class="img-menu-girl" src="assets/images/backgrounds/img-menu-girl.gif">
                 <button id="start">
@@ -39,20 +45,21 @@
                 </button>
                 <div id="controls-description"></div>
             </div>
+
+            <canvas height="575px" id="canvas" width="566px">
+
             <!-- Canvas should have width and height inline or in external css -->
             <canvas id="canvas" height="575px" width="566px">
+
                 Sorry canvas is not supported
             </canvas>
 
         </div>
-
         <script src="lib/soundmanager2.js">
         </script>
         <script src="lib/jquery-1.12.0.min.js">
         </script>
-
-        </script>
-        <script data-main="scripts/main" src="lib/require.js">
-        </script>
     </body>
 </html>
+<script data-main="scripts/main" src="lib/require.js">
+</script>
