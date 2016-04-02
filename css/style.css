@@ -1,39 +1,126 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#main {
+    width: 100%;
+    position: relative;
+    min-height: 650px;
+    background-image: url("../assets/images/backgrounds/img-main-backgroung.gif");
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
 #canvas {
-  width: 566px;
-  height: 575px;
-  border: 1px solid black;
-  background-image: url("building.gif");
-  display: none;
+    width: 566px;
+    height: 566px;
+    background-image: url("../assets/images/backgrounds/building2.gif");
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 #menu {
-	width:90%;
-	height:570px;
-	background-image: url("building.gif");
-	background-repeat: no-repeat;
-<<<<<<< HEAD
-	/*position: absolute;*/
-=======
-	position: absolute;
->>>>>>> a99b18333ef6ede3a54279bf80f79285649289f5
+    width: 100%;
+    min-height: 650px;
+    background-image: url("../assets/images/backgrounds/img-menu-background.gif");
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
 }
+
+.img-menu-girl {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #start {
-	position: relative;
-	top: 200px;
-	padding: 15px;
-	margin:auto;
-	display: block;
-	
+    position: absolute;
+    top: 397px;
+    padding: 15px;
+    display: block;
+    background: url("../assets/images/menu/play-button.gif");
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 98px;
+    border: none;
+    outline: none;
 }
 
 #buttonDisc {
-
-	position: relative;
-	top: 250px;
-	margin:auto;
-	display: block;
-	padding: 15px;
+    position: absolute;
+    top: 500px;
+    margin: auto;
+    display: block;
+    padding: 15px;
+    background: url("../assets/images/menu/img-controls-button.gif");
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 94px;
+    border: none;
+    outline: none;
 }
-#disc {
+
+#controls-description {
+    background: url("../assets/images/controls-frame/controls-background.png")no-repeat;
+    display: none;
+    position: absolute;
+    width: 300px;
+    top: 400px;
+    left: 250px;
+    padding: 100px;
+}
+
+#mute {
+    position: absolute;
+    background: url("../assets/images/soundbtns/btn-snd-on.gif");
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 94px;
+    border: none;
+    outline: none;
+}
+
+#unmute {
 	display: none;
-	padding-top:  300px;
+    position: absolute;
+    background: url("../assets/images/soundbtns/btn-snd-off.gif");
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 94px;
+    border: none;
+    outline: none;
+}
+.lives {
+  width: 160px;
+  height: 40px;
+  padding-left: 16%;
+}
+.lives1 {
+  float: left;
+
+  width: 50px;
+  height: 40px;
+  background: url("../assets/images/moving-units/img-sombrero.png");
+
+}
+
+.lives2 {
+  float: left;
+  width: 50px;
+  height: 40px;
+  background: url("../assets/images/moving-units/img-sombrero.png");
+}
+.lives3 {
+  float: left;
+  width: 50px;
+  height: 40px;
+  background: url("../assets/images/moving-units/img-sombrero.png");
+}
+.score {
+  background: url("../assets/images/moving-units/img-bra.png");
 }
