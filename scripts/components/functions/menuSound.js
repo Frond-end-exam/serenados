@@ -8,7 +8,7 @@ define(function() {
             menuSound.play({
                 loops: 5
             });
-            
+            soundManager.load();
         });
     };
     return menuSound;

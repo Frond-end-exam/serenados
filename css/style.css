@@ -39,6 +39,7 @@ body {
 }
 
 #start {
+    cursor: pointer;
     position: absolute;
     top: 397px;
     padding: 15px;
@@ -52,6 +53,7 @@ body {
 }
 
 #buttonDisc {
+    cursor: pointer;
     position: absolute;
     top: 500px;
     margin: auto;
@@ -76,6 +78,7 @@ body {
 }
 
 #mute {
+    cursor: pointer;
     position: absolute;
     background: url("../assets/images/soundbtns/btn-snd-on.gif");
     background-repeat: no-repeat;
@@ -86,7 +89,8 @@ body {
 }
 
 #unmute {
-	display: none;
+    cursor: pointer;
+    display: none;
     position: absolute;
     background: url("../assets/images/soundbtns/btn-snd-off.gif");
     background-repeat: no-repeat;
@@ -95,11 +99,10 @@ body {
     border: none;
     outline: none;
 }
-.lives {
-  
-padding-top: 100px;
-  width: 40px;
-  height: 60px;
-  background: url("../assets/images/moving-units/img-sombrero.png");
 
+.lives {
+    padding-top: 100px;
+    width: 40px;
+    height: 60px;
+    background: url("../assets/images/moving-units/img-sombrero.png");
 }
