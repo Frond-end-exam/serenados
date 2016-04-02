@@ -2,8 +2,8 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
     "use strict";
     var imgGirl = new Image();
     var imgGranny = new Image();
-    imgGranny.src = "design/Moving units/img-granny.png";
-    imgGirl.src = "design/Moving units/img-girl.png";
+    imgGranny.src = "assets/images/moving-units/img-granny.png";
+    imgGirl.src = "assets/images//moving-units/img-girl.png";
     var girls = {
         x: ball.x,
         y: ball.y,
