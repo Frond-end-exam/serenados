@@ -1,6 +1,6 @@
 
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', /*'components/functions/gameOverMenu'*/], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound, menu, touchBraSound, touchCactusSound/*, gameOverMenu*/) {
 
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound, menu) {
     "use strict";
     menu();
     menuSound();
@@ -43,6 +43,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             }
             girls.draw();
             ball.draw();
+            touchBraSound();
         }
         if ((ball.y) > (hero.Y - hero.height) && (ball.x + ball.radius) > hero.X && (ball.x - ball.radius) < (hero.X + hero.width) && ball.color == "#0095DD") {
             lives.count--;
@@ -57,16 +58,17 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             }
             girls.draw();
             ball.draw();
+            touchCactusSound();
         }
         if (lives.count === 0) {
             gameOverSound();
             clearInterval(gameInterval);
-            setTimeout(function () {
+            // gameOverMenu();
+            setTimeout(function() {
                 window.location.reload();
             }, 2000);
         }
     }
-
     var gameInterval = setInterval(function() {
         update();
     }, 10);
