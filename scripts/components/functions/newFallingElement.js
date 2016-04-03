@@ -1,8 +1,8 @@
-define(['components/models/canvas', 'components/models/fallobject', 'components/models/girls','components/functions/randomX', 'components/functions/randomY'], function(Canvas, ball, girls, randomX, randomY) {
+define(['components/models/canvas', 'components/models/fallobject', 'components/models/girls', 'components/functions/randomX', 'components/functions/randomY'], function(Canvas, ball, girls, randomX, randomY) {
     "use strict";
-    var randomNumber = Math.floor((Math.random() * 2) + 1);
 
     function newFallingElement() {
+        var randomNumber = Math.floor((Math.random() * 2) + 1);
         ball.x = randomX();
         ball.y = randomY();
         girls.x = ball.x;
