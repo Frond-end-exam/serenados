@@ -9,7 +9,7 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
         y: randomY(),
         radius: 15,
         color: "#0095DD",
-        vy: 1,
+        vy: 3,
         draw: function() {
             Canvas.ctx.beginPath();
             if (ball.color == "red") {

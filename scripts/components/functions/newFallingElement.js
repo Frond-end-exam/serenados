@@ -2,6 +2,7 @@ define(['components/models/canvas', 'components/models/fallobject', 'components/
     "use strict";
 
     function newFallingElement() {
+  
         var randomNumber = Math.floor((Math.random() * 2) + 1);
         ball.x = randomX();
         ball.y = randomY();

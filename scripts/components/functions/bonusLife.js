@@ -5,13 +5,13 @@ define(['components/models/canvas', 'components/models/heart', 'components/model
         heart.draw();
         heart.y += heart.vy;
         if (heart.y + heart.vy > H - heart.radius || heart.y + heart.vy < heart.radius) {
-            score.count++;
+            scoret++;
             heart.x = randomX();
             heart.y = randomY();
         }
         if ((heart.y) > (hero.Y - hero.height) && (heart.x + heart.radius) > hero.X && (heart.x - heart.radius) < (hero.X + hero.width)) {
-            lives.count++;
-            score.count++;
+            lives++;
+            score++;
             heart.x = randomX();
             heart.y = randomY();
         }
