@@ -2,9 +2,11 @@ body {
     padding: 0px;
     margin: 0px;
 }
+.game{
+  display: none;
 
+}
 #main {
-    display: none;
     width: 100%;
     position: relative;
     min-height: 650px;
@@ -41,8 +43,6 @@ body {
 }
 
 .game-over-menu {
-    width: 1024px;
-    height: 600px;
     position: relative;
     display: none;
     margin-left: auto;
@@ -51,17 +51,8 @@ body {
     background: url('../assets/images/backgrounds/background-game-over.png');
 }
 
-.game-over-menu .menu-button {
-    position: absolute;
-    display: block;
-    left: 382px;
-    top: 90px;
-    width: 240px;
-    height: 94px;
-    cursor: pointer;
+.game-over-menu .menu {
     background: url('../assets/images/game-over/img-btn-menu.png');
-    border: none;
-    outline: none;
 }
 
 #start {
