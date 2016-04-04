@@ -45,9 +45,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
         }
         if (lives === 0) {
             clearInterval(gameInterval);
-            setTimeout(function() {
-                window.location.reload();
-            }, 2000);
+            
             gameOverSound();
             gameOverMenu();
           }
