@@ -2,7 +2,10 @@ body {
     padding: 0px;
     margin: 0px;
 }
+.game{
+  display: none;
 
+}
 #main {
     width: 100%;
     position: relative;
@@ -16,12 +19,13 @@ body {
     width: 566px;
     height: 566px;
     background-image: url("../assets/images/backgrounds/building2.gif");
-    display: none;
+
     margin-left: auto;
     margin-right: auto;
 }
 
 #menu {
+
     width: 100%;
     min-height: 650px;
     background-image: url("../assets/images/backgrounds/img-menu-background.gif");
@@ -39,8 +43,6 @@ body {
 }
 
 .game-over-menu {
-    width: 1024px;
-    height: 600px;
     position: relative;
     display: none;
     margin-left: auto;
@@ -49,17 +51,8 @@ body {
     background: url('../assets/images/backgrounds/background-game-over.png');
 }
 
-.game-over-menu .menu-button {
-    position: absolute;
-    display: block;
-    left: 382px;
-    top: 90px;
-    width: 240px;
-    height: 94px;
-    cursor: pointer;
+.game-over-menu .menu {
     background: url('../assets/images/game-over/img-btn-menu.png');
-    border: none;
-    outline: none;
 }
 
 #start {
@@ -125,9 +118,10 @@ body {
 }
 
 .lives {
-  width: 160px;
+  float: left;
+  width: 100px;
   height: 40px;
-  padding-left: 16%;
+  padding-left: 15%;
 }
 .lives1 {
   float: left;
@@ -135,19 +129,35 @@ body {
   width: 50px;
   height: 40px;
   background: url("../assets/images/moving-units/img-sombrero.png");
-
-.lives2 {
-  float: left;
-  width: 50px;
-  height: 40px;
-  background: url("../assets/images/moving-units/img-sombrero.png");
 }
+
+
 .lives3 {
-  float: left;
+  float: right;
   width: 50px;
   height: 40px;
-  background: url("../assets/images/moving-units/img-sombrero.png");
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
 .score {
+  float: right;
+  width: 100px;
+  height: 40px;
+  padding-right: 15%;
+
+}
+.scoreImg {
+  float: left;
+  width: 40px;
+  height: 50px;
   background: url("../assets/images/moving-units/img-bra.png");
+}
+.scoreCount {
+  float: right;
+  width: 30px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
