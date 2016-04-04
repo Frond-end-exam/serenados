@@ -8,10 +8,10 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
         radius: 15,
         vy: 2,
         draw: function() {
-            Canvas.ctx.beginPath();
-            Canvas.ctx.drawImage(imgHeart, this.x, this.y);
-            Canvas.ctx.fill();
-            Canvas.ctx.closePath();
+                Canvas.ctx.beginPath();
+                Canvas.ctx.drawImage(imgHeart, this.x, this.y);
+                Canvas.ctx.fill();
+                Canvas.ctx.closePath();
         }
     };
     return heart;

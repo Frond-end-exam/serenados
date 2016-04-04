@@ -1,10 +1,8 @@
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/models/heart', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/functions/gameOverMenu', 'components/functions/newFallingElement', 'components/models/girls'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound, menu, heart, touchBraSound, touchCactusSound, gameOverMenu, newFallingElement, girls) {
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/models/heart', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/functions/gameOverMenu', 'components/functions/newFallingElement', 'components/functions/bonusLife', 'components/models/girls', 'components/models/canvasWidth', 'components/models/canvasHeight'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound, menu, heart, touchBraSound, touchCactusSound, gameOverMenu, newFallingElement, bonusLife, girls, W, H) {
     "use strict";
     // gameOverMenu();
     menu();
     menuSound();
-    var W = Canvas.canvas.width,
-        H = Canvas.canvas.height;
 
     function update() {
         clearCanvas();
@@ -27,9 +25,8 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             newFallingElement();
             touchCactusSound();
         }
-        if (score.count === 1) {
-            heart.draw();
-            heart.y += heart.vy;
+        if (score.count > 1 && score.count % 10 === 0) {
+            bonusLife();
         }
         if (lives.count === 0) {
             clearInterval(gameInterval);
