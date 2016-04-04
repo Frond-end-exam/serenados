@@ -1,4 +1,4 @@
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', /*'components/functions/gameOverMenu',*/ 'components/models/girls'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound, menu, touchBraSound, touchCactusSound,/*, gameOverMenu,*/girls) {
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/models/score', 'components/models/lives', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/models/girls'], function(hero, Canvas, ball, randomX, randomY, score, lives, clearCanvas, menuSound, gameOverSound, gameSound, menu, touchBraSound, touchCactusSound, girls) {
 
     "use strict";
     menu();
@@ -6,8 +6,13 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
 
     var W = Canvas.canvas.width,
         H = Canvas.canvas.height;
-
-    function update() {
+        $('#start').click(function() {
+            $('#menu').css('display', 'none');
+            $('#main').css('display', 'block');
+            gameSound();
+      var gameInterval = setInterval(function update() {
+      $(".lives3").text(lives.count);
+      $(".scoreCount").text(score.count);
         var randomNumber = Math.floor((Math.random() * 2) + 1);
         clearCanvas();
         score.draw();
@@ -31,6 +36,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
         }
         if ((ball.y) > (hero.Y - hero.height) && (ball.x + ball.radius) > hero.X && (ball.x - ball.radius) < (hero.X + hero.width) && ball.color == "red") {
             score.count++;
+
             ball.x = randomX();
             ball.y = randomY();
             girls.x = ball.x;
@@ -62,13 +68,12 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
         if (lives.count === 0) {
             gameOverSound();
             clearInterval(gameInterval);
-            // gameOverMenu();
             setTimeout(function() {
                 window.location.reload();
             }, 2000);
         }
-    }
-    var gameInterval = setInterval(function() {
-        update();
     }, 10);
+
+
+});
 });

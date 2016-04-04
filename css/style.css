@@ -4,6 +4,7 @@ body {
 }
 
 #main {
+    display: none;
     width: 100%;
     position: relative;
     min-height: 650px;
@@ -16,12 +17,13 @@ body {
     width: 566px;
     height: 566px;
     background-image: url("../assets/images/backgrounds/building2.gif");
-    display: none;
+
     margin-left: auto;
     margin-right: auto;
 }
 
 #menu {
+
     width: 100%;
     min-height: 650px;
     background-image: url("../assets/images/backgrounds/img-menu-background.gif");
@@ -114,9 +116,10 @@ body {
 }
 
 .lives {
-  width: 160px;
+  float: left;
+  width: 100px;
   height: 40px;
-  padding-left: 16%;
+  padding-left: 15%;
 }
 .lives1 {
   float: left;
@@ -124,19 +127,35 @@ body {
   width: 50px;
   height: 40px;
   background: url("../assets/images/moving-units/img-sombrero.png");
-
-.lives2 {
-  float: left;
-  width: 50px;
-  height: 40px;
-  background: url("../assets/images/moving-units/img-sombrero.png");
 }
+
+
 .lives3 {
-  float: left;
+  float: right;
   width: 50px;
   height: 40px;
-  background: url("../assets/images/moving-units/img-sombrero.png");
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
 .score {
+  float: right;
+  width: 100px;
+  height: 40px;
+  padding-right: 15%;
+
+}
+.scoreImg {
+  float: left;
+  width: 40px;
+  height: 50px;
   background: url("../assets/images/moving-units/img-bra.png");
+}
+.scoreCount {
+  float: right;
+  width: 30px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
