@@ -1,6 +1,6 @@
 define(function() {
-
-  var lives = 3;
-
-  return lives;
+    var lives = {
+        count: 3
+    };
+    return lives;
 });
