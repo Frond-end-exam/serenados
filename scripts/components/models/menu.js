@@ -1,11 +1,7 @@
 define(['../functions/gameSound'], function(gameSound) {
     'use strict';
     var menu = function() {
-        $('#start').click(function() {
-            $('#menu').css('display', 'none');
-            $('#canvas').css('display', 'block');
-            gameSound();
-        });
+    
         $('#buttonDisc').click(function() {
             $('#controls-description').css('display', 'block');
         });
