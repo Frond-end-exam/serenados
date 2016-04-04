@@ -3,4 +3,4 @@ var score = 0;
 
 return score;
 
-})
+});
