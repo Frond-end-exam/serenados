@@ -7,12 +7,13 @@ body {
     display: none;
 }
 
+
+/* BACKGROUDS */
+
 #main {
     width: 100%;
     position: relative;
     min-height: 650px;
-    background-image: url("../assets/images/backgrounds/moreclouds.png");
-    background-color: #ccffff;
     background-size: cover;
     -webkit-background-size: cover;
 }
@@ -20,11 +21,50 @@ body {
 #canvas {
     width: 566px;
     height: 590px;
-    background-image: url("../assets/images/backgrounds/building.gif");
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    background-image: url("../assets/images/backgrounds/dayBuilding.gif");
 }
+
+.morning {
+    background-image: url("../assets/images/backgrounds/nightBackground.png");
+    background-color: #66d5cc;
+}
+
+.day {
+    background-image: url("../assets/images/backgrounds/dayBackground.png");
+    background-color: #ccffff;
+}
+
+.evening {
+    background-image: url("../assets/images/backgrounds/dayBackground.png");
+    background-color: #99aa99;
+}
+
+.night {
+    background-image: url("../assets/images/backgrounds/nightBackground.png");
+    background-color: #665599;
+}
+
+.canvasMorning {
+    background-image: url("../assets/images/backgrounds/morningBuilding.gif");
+}
+
+.canvasDay {
+    background-image: url("../assets/images/backgrounds/dayBuilding.gif");
+}
+
+.canvasEvening {
+    background-image: url("../assets/images/backgrounds/eveningBuilding.gif");
+}
+
+.canvasNight {
+    background-image: url("../assets/images/backgrounds/nightBuilding.gif");
+}
+
+
+/* OTHER THINGS*/
 
 #menu {
     width: 100%;
