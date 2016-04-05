@@ -43,15 +43,16 @@ body {
 }
 
 .game-over-menu {
-    position: relative;
+    height: 600px;
+    /*position: relative;*/
     display: none;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     z-index: 10;
     background: url('../assets/images/backgrounds/background-game-over.png');
+    background-repeat: no-repeat;
 }
 
-.game-over-menu .menu {
+.game-over-menu .menu-button {
     background: url('../assets/images/game-over/img-btn-menu.png');
 }
 
