@@ -31,6 +31,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
                 bonusLife();
             }
             if (lives.count === 0) {
+                $(".lives3").text(0);
                 clearInterval(gameInterval);
                 gameOverSound();
                 gameOverMenu();
