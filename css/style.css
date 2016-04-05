@@ -1,3 +1,4 @@
+
 body {
     padding: 0px;
     margin: 0px;
@@ -10,14 +11,15 @@ body {
     width: 100%;
     position: relative;
     min-height: 650px;
-    background-image: url("../assets/images/backgrounds/img-main-backgroung.gif");
+    background-image: url("../assets/images/backgrounds/dayBackground.png");
     background-size: cover;
     -webkit-background-size: cover;
 }
 
 #canvas {
+    margin-top: 20px;
     width: 566px;
-    height: 566px;
+    height: 590px;
     background-image: url("../assets/images/backgrounds/building2.gif");
     margin-left: auto;
     margin-right: auto;
