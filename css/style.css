@@ -24,7 +24,7 @@ body {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("../assets/images/backgrounds/dayBuilding.gif");
+    background: url('../assets/images/backgrounds/dayBuilding.gif');
 }
 
 .morning {
@@ -84,16 +84,27 @@ body {
 }
 
 .game-over-menu {
-    position: relative;
-    display: none;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 10;
-    background: url('../assets/images/backgrounds/background-game-over.png');
-}
+    width: 1024px;
+    height: 600px;
+      position: absolute;
+      display: none;
+      left: 10%;
+      top: 3%;
+      z-index: 10;
+      background: url('../assets/images/backgrounds/background-game-over.png');
+  }
 
-.game-over-menu .menu {
-    background: url('../assets/images/game-over/img-btn-menu.png');
+  .game-over-menu .menu-button {
+    position: absolute;
+    display: block;
+    left: 382px;
+    top: 90px;
+    width: 240px;
+    height: 94px;
+    cursor: pointer;
+      background: url('../assets/images/game-over/img-btn-menu.png');
+   border: none;
+     outline: none;
 }
 
 #start {

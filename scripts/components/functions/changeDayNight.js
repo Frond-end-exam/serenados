@@ -1,20 +1,18 @@
 define(['components/models/canvas'], function(Canvas) {
     "use strict";
-
+  var time = 1;
     function changeDayNight() {
-        if ($('#main').hasClass('day')) {
+      console.log(time);
+
+        if (time === 1) {
             $('#main').removeClass('day').addClass('evening');
-            $('#canvas').css("background-image", "url("../assets/images/backgrounds/eveningBuilding.gif")");
-        }
-
-
-
-
-        if ($('#main').hasClass('evening') && $('#canvas').hasClass('canvasEvening')) {
+            $('#canvas').css("background", "url('../assets/images/backgrounds/eveningBuilding.gif')");
+            time = 2;
+        } else if (time === 2) {
             $('#main').removeClass('evening').addClass('night');
             $('#canvas').removeClass('canvasEvening').addClass('canvasNight');
-        }
-        if ($('#main').hasClass('night') && $('#canvas').hasClass('canvasNight')) {
+            time = 3;
+        }else if (time === 3) {
             $('#main').removeClass('night').addClass('morning');
             $('#canvas').removeClass('canvasNight').addClass('canvasMorning');
         }

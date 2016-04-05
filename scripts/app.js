@@ -27,11 +27,12 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
                 newFallingElement();
                 touchCactusSound();
             }
-            if (score.count > 1 && score.count % 10 === 0) {
-                bonusLife();
-                changeDayNight();
-            }
+            // if (score.count > 1 && score.count % 2 === 0) {
+            //     bonusLife();
+            //     changeDayNight();
+            // }
             if (lives.count === 0) {
+                $(".lives3").text(0);
                 clearInterval(gameInterval);
                 gameOverSound();
                 gameOverMenu();
