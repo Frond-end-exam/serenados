@@ -20,6 +20,28 @@ define(['components/models/canvas'], function(Canvas) {
             leftPressed = false;
         }
     }
+    //-- ANIMATION --
+    var imgMan = new Image();
+    imgMan.src = "assets/images/moving-units/img-man.png";
+
+    function sprite(options) {
+        var that = {};
+        that.context = options.context;
+        that.width = options.width;
+        that.height = options.height;
+        that.image = options.image;
+        that.render = function() {
+            // Draw the animation
+            that.context.drawImage(that.image, 0, 0, that.width, that.height, 0, 0, that.width, that.height);
+        };
+        return that;
+    }
+    draImgMan = sprite({
+        width: 100,
+        height: 100,
+        image: imgMan
+    });
+    //--------------------------
     var imgLeft = new Image();
     var imgRight = new Image();
     imgLeft.src = "assets/images/moving-units/img-man-right.png";
@@ -31,11 +53,7 @@ define(['components/models/canvas'], function(Canvas) {
         Y: Canvas.canvas.height - 140,
         draw: function() {
             Canvas.ctx.beginPath();
-            if (Canvas.canvas.width / 2 > hero.X) {
-                Canvas.ctx.drawImage(imgLeft, this.X, this.Y);
-            } else {
-                Canvas.ctx.drawImage(imgRight, this.X, this.Y);
-            }
+            Canvas.ctx.drawImage(imgRight, this.X, this.Y);
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
             if (rightPressed && this.X < Canvas.canvas.width - this.width) {
