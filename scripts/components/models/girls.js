@@ -11,9 +11,9 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
         draw: function() {
             Canvas.ctx.beginPath();
             if (ball.color == "red") {
-                Canvas.ctx.drawImage(imgGirl, this.x-25, this.y-50);
+                Canvas.ctx.drawImage(imgGirl, this.x-25, this.y-40);
             } else {
-                Canvas.ctx.drawImage(imgGranny, this.x-40, this.y-40);
+                Canvas.ctx.drawImage(imgGranny, this.x-40, this.y-30);
             }
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
