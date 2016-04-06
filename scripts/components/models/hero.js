@@ -20,8 +20,10 @@ define(['components/models/canvas'], function(Canvas) {
             leftPressed = false;
         }
     }
-    var img = new Image();
-    img.src = "assets/images/moving-units/img-man.png";
+    var imgLeft = new Image();
+    var imgRight = new Image();
+    imgLeft.src = "assets/images/moving-units/img-man-right.png";
+    imgRight.src = "assets/images/moving-units/img-man-left.png";
     var hero = {
         height: 30,
         width: 70,
@@ -29,10 +31,14 @@ define(['components/models/canvas'], function(Canvas) {
         Y: Canvas.canvas.height - 140,
         draw: function() {
             Canvas.ctx.beginPath();
-            Canvas.ctx.drawImage(img, this.X, this.Y);
+            if (Canvas.canvas.width / 2 > hero.X) {
+                Canvas.ctx.drawImage(imgLeft, this.X, this.Y);
+            } else {
+                Canvas.ctx.drawImage(imgRight, this.X, this.Y);
+            }
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
-            if (rightPressed && this.X < Canvas.canvas.width-this.width) {
+            if (rightPressed && this.X < Canvas.canvas.width - this.width) {
                 this.X += 2;
             } else if (leftPressed && this.X > 0) {
                 this.X -= 2;
