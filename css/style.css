@@ -2,10 +2,11 @@ body {
     padding: 0px;
     margin: 0px;
 }
-.game{
-  display: none;
 
+.game {
+    display: none;
 }
+
 #main {
     width: 100%;
     position: relative;
@@ -25,21 +26,25 @@ body {
 .morning {
     background-image: url("../assets/images/backgrounds/nightBackground.png");
     background-color: #66d5cc;
+    transition: all 0.5s ease-in-out;
 }
 
 .day {
     background-image: url("../assets/images/backgrounds/dayBackground.png");
     background-color: #ccffff;
+    transition: all 0.5s ease-in-out;
 }
 
 .evening {
     background-image: url("../assets/images/backgrounds/dayBackground.png");
     background-color: #99aa99;
+    transition: all 0.5s ease-in-out;
 }
 
 .night {
     background-image: url("../assets/images/backgrounds/nightBackground.png");
     background-color: #665599;
+    transition: all 0.5s ease-in-out;
 }
 
 .canvasMorning {
@@ -78,15 +83,15 @@ body {
 .game-over-menu {
     width: 1024px;
     height: 600px;
-      position: absolute;
-      display: none;
-      left: 10%;
-      top: 3%;
-      z-index: 10;
-      background: url('../assets/images/backgrounds/background-game-over.png');
-  }
+    position: absolute;
+    display: none;
+    left: 10%;
+    top: 3%;
+    z-index: 10;
+    background: url('../assets/images/backgrounds/background-game-over.png');
+}
 
-  .game-over-menu .menu-button {
+.game-over-menu .menu-button {
     position: absolute;
     display: block;
     left: 382px;
@@ -94,9 +99,9 @@ body {
     width: 240px;
     height: 94px;
     cursor: pointer;
-      background: url('../assets/images/game-over/img-btn-menu.png');
-   border: none;
-     outline: none;
+    background: url('../assets/images/game-over/img-btn-menu.png');
+    border: none;
+    outline: none;
 }
 
 #start {
@@ -162,46 +167,47 @@ body {
 }
 
 .lives {
-  float: left;
-  width: 100px;
-  height: 40px;
-  padding-left: 15%;
+    float: left;
+    width: 100px;
+    height: 40px;
+    padding-left: 15%;
 }
+
 .lives1 {
-  float: left;
-
-  width: 50px;
-  height: 40px;
-  background: url("../assets/images/moving-units/img-sombrero.png");
+    float: left;
+    width: 50px;
+    height: 40px;
+    background: url("../assets/images/moving-units/img-sombrero.png");
 }
-
 
 .lives3 {
-  float: right;
-  width: 50px;
-  height: 40px;
-  text-align: center;
-  color: white;
-  font-size: 30px;
+    float: right;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
 }
-.score {
-  float: right;
-  width: 100px;
-  height: 40px;
-  padding-right: 15%;
 
+.score {
+    float: right;
+    width: 100px;
+    height: 40px;
+    padding-right: 15%;
 }
+
 .scoreImg {
-  float: left;
-  width: 40px;
-  height: 50px;
-  background: url("../assets/images/moving-units/img-bra.png");
+    float: left;
+    width: 40px;
+    height: 50px;
+    background: url("../assets/images/moving-units/img-bra.png");
 }
+
 .scoreCount {
-  float: right;
-  width: 30px;
-  height: 50px;
-  text-align: center;
-  color: white;
-  font-size: 30px;
+    float: right;
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
 }
