@@ -11,11 +11,9 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
         var gameInterval = setInterval(function update() {
             time++;
             if (time % 1000 === 0) {
-                console.log('fdddddddddddddddddddddddddddddddddddd');
                 changeDayNight();
     
                 }
-            // console.log(time);
             $(".lives3").text(lives.count);
             $(".scoreCount").text(score.count);
             clearCanvas();

@@ -2,7 +2,6 @@ define(['components/models/canvas'], function(Canvas) {
     "use strict";
 
     function changeDayNight() {
-       console.log('fdsf'); 
 
         if ($('#main').hasClass('day')) {
             $('#main').removeClass('day').addClass('evening');
