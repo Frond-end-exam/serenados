@@ -1,12 +1,19 @@
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/models/heart', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/functions/gameOverMenu', 'components/functions/newFallingElement', 'components/functions/bonusLife', 'components/models/girls', 'components/models/canvasWidth', 'components/models/canvasHeight', 'components/models/score', 'components/models/lives'], function(hero, Canvas, ball, randomX, randomY, clearCanvas, menuSound, gameOverSound, gameSound, menu, heart, touchBraSound, touchCactusSound, gameOverMenu, newFallingElement, bonusLife, girls, W, H, score, lives) {
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/models/heart', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/functions/gameOverMenu', 'components/functions/newFallingElement', 'components/functions/bonusLife', 'components/models/girls', 'components/models/canvasWidth', 'components/models/canvasHeight', 'components/models/score', 'components/models/lives', 'components/functions/changeDayNight'], function(hero, Canvas, ball, randomX, randomY, clearCanvas, menuSound, gameOverSound, gameSound, menu, heart, touchBraSound, touchCactusSound, gameOverMenu, newFallingElement, bonusLife, girls, W, H, score, lives, changeDayNight) {
     "use strict";
+    console.log(changeDayNight);
     menu();
     menuSound();
     $('#start').click(function() {
         $('#menu').css('display', 'none');
         $('.game').css('display', 'block');
         gameSound();
+        var time = 1;
         var gameInterval = setInterval(function update() {
+            time++;
+            if (time % 1000 === 0) {
+                changeDayNight();
+    
+                }
             $(".lives3").text(lives.count);
             $(".scoreCount").text(score.count);
             clearCanvas();
@@ -31,10 +38,12 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
                 bonusLife();
             }
             if (lives.count === 0) {
+                $(".lives3").text(0);
                 clearInterval(gameInterval);
                 gameOverSound();
                 gameOverMenu();
             }
+            
         }, 10);
     });
 });
