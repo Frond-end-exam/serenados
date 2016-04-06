@@ -2,9 +2,11 @@ body {
     padding: 0px;
     margin: 0px;
 }
+.game{
+  display: none;
 
+}
 #main {
-    display: none;
     width: 100%;
     position: relative;
     min-height: 650px;
@@ -17,13 +19,11 @@ body {
     width: 566px;
     height: 566px;
     background-image: url("../assets/images/backgrounds/building2.gif");
-
     margin-left: auto;
     margin-right: auto;
 }
 
 #menu {
-
     width: 100%;
     min-height: 650px;
     background-image: url("../assets/images/backgrounds/img-menu-background.gif");
@@ -41,16 +41,27 @@ body {
 }
 
 .game-over-menu {
-    position: relative;
-    display: none;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 10;
-    background: url('../assets/images/backgrounds/background-game-over.png');
-}
+    width: 1024px;
+    height: 600px;
+      position: absolute;
+      display: none;
+      left: 10%;
+      top: 3%;
+      z-index: 10;
+      background: url('../assets/images/backgrounds/background-game-over.png');
+  }
 
-.game-over-menu .menu {
-    background: url('../assets/images/game-over/img-btn-menu.png');
+  .game-over-menu .menu-button {
+    position: absolute;
+    display: block;
+    left: 382px;
+    top: 90px;
+    width: 240px;
+    height: 94px;
+    cursor: pointer;
+      background: url('../assets/images/game-over/img-btn-menu.png');
+   border: none;
+     outline: none;
 }
 
 #start {
@@ -97,8 +108,8 @@ body {
     position: absolute;
     background: url("../assets/images/soundbtns/btn-snd-on.gif");
     background-repeat: no-repeat;
-    width: 214px;
-    height: 94px;
+    width: 70px;
+    height: 40px;
     border: none;
     outline: none;
 }
@@ -109,8 +120,8 @@ body {
     position: absolute;
     background: url("../assets/images/soundbtns/btn-snd-off.gif");
     background-repeat: no-repeat;
-    width: 214px;
-    height: 94px;
+    width: 70px;
+    height: 40px;
     border: none;
     outline: none;
 }
