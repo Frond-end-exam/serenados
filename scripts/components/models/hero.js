@@ -21,6 +21,7 @@ define(['components/models/canvas'], function(Canvas) {
         }
     }
     //-- ANIMATION --
+    /*
     var imgMan = new Image();
     imgMan.src = "assets/images/moving-units/img-man.png";
 
@@ -41,6 +42,7 @@ define(['components/models/canvas'], function(Canvas) {
         height: 100,
         image: imgMan
     });
+    */
     //--------------------------
     var imgLeft = new Image();
     var imgRight = new Image();

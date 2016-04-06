@@ -1,4 +1,4 @@
-define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/models/heart', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/functions/gameOverMenu', 'components/functions/newFallingElement', 'components/functions/bonusLife', 'components/models/girls', 'components/models/canvasWidth', 'components/models/canvasHeight', 'components/models/score', 'components/models/lives', 'components/functions/changeDayNight'], function(hero, Canvas, ball, randomX, randomY, clearCanvas, menuSound, gameOverSound, gameSound, menu, heart, touchBraSound, touchCactusSound, gameOverMenu, newFallingElement, bonusLife, girls, W, H, score, lives, changeDayNight) {
+define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/models/heart', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/functions/gameOverMenu', 'components/functions/newFallingElement', 'components/functions/bonusLife', 'components/models/girls', 'components/models/canvasWidth', 'components/models/canvasHeight', 'components/models/score', 'components/models/lives', 'components/functions/changeDayNight', 'components/models/angryMan', 'components/models/tv', 'components/functions/newFallingTV'], function(hero, Canvas, ball, randomX, randomY, clearCanvas, menuSound, gameOverSound, gameSound, menu, heart, touchBraSound, touchCactusSound, gameOverMenu, newFallingElement, bonusLife, girls, W, H, score, lives, changeDayNight, angryMan, tv, newFallingTV) {
     "use strict";
     console.log(changeDayNight);
     menu();
@@ -20,6 +20,9 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             girls.draw();
             ball.draw();
             hero.draw();
+            angryMan.draw();
+            tv.draw();
+            tv.y += tv.vy;
             ball.y += ball.vy;
             if (ball.y + ball.vy > H - ball.radius || ball.y + ball.vy < ball.radius) {
                 newFallingElement();
@@ -36,6 +39,13 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             }
             if (score.count > 1 && score.count % 10 === 0) {
                 bonusLife();
+            }
+            if (tv.y + tv.vy > H - tv.radius || tv.y + tv.vy < tv.radius) {
+                newFallingTV();
+            }
+            if ((tv.y) > (hero.Y - hero.height) && (tv.x + tv.radius) > hero.X && (tv.x - tv.radius) < (hero.X + hero.width)) {
+                lives.count--;
+                newFallingTV();
             }
             if (lives.count === 0) {
                 $(".lives3").text(0);

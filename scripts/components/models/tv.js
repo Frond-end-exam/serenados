@@ -1,23 +1,22 @@
 define(['components/models/canvas', 'components/functions/randomX', 'components/functions/randomY'], function(Canvas, randomX, randomY) {
     "use strict";
-    var imgBra = new Image();
-    imgBra.src = "assets/images/moving-units/img-bra.png";
-    var imgCactus = new Image();
-    imgCactus.src = "assets/images/moving-units/img-cactus.png";
+    var tvLeft = new Image();
+    tvLeft.src = "assets/images/moving-units/tv/tv.png";
+    var tvRight = new Image();
+    tvRight.src = "assets/images/moving-units/tv/tv.png";
     var tv = {
         x: randomX(),
         y: randomY(),
         radius: 15,
-        color: "#0095DD",
+        side: 1,
         vy: 1.5,
         draw: function() {
             Canvas.ctx.beginPath();
-            if (tv.color == "red") {
-                Canvas.ctx.drawImage(imgBra, this.x - 20, this.y-20);
+            if (tv.side == 1) {
+                Canvas.ctx.drawImage(tvLeft, this.x - 20, this.y-20);
             } else {
-                Canvas.ctx.drawImage(imgCactus, this.x - 25, this.y-20);
+                Canvas.ctx.drawImage(tvRight, this.x - 25, this.y-20);
             }
-            Canvas.ctx.fillStyle = this.color;
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
         }
