@@ -47,7 +47,7 @@ body {
     background-color: #665599;
     transition: all 0.5s ease-in-out;
 }
-
+ /*
 .canvasMorning {
     background-image: url("../assets/images/backgrounds/morningBuilding.gif");
 }
@@ -63,7 +63,7 @@ body {
 .canvasNight {
     background-image: url("../assets/images/backgrounds/nightBuilding.gif");
 }
-
+ */
 #menu {
     width: 100%;
     min-height: 650px;
@@ -211,7 +211,8 @@ body {
     width: 50px;
     height: 40px;
     text-align: center;
-    color: white;
+    color: #523B03;
+    text-shadow: 0 0 0.2em #F87, 0 0 1em hsla(63, 100%, 57%, 0.58);
     font-size: 30px;
 }
 
@@ -234,6 +235,7 @@ body {
     width: 30px;
     height: 50px;
     text-align: center;
-    color: white;
+    color: #990C0C;
+    text-shadow: 0 0 0.2em #F87, 0 0 1em hsla(63, 100%, 57%, 0.58);
     font-size: 30px;
 }
