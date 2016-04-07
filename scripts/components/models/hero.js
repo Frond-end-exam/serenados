@@ -31,10 +31,10 @@ define(['components/models/canvas'], function(Canvas) {
         Y: Canvas.canvas.height - 140,
         draw: function() {
             Canvas.ctx.beginPath();
-            if (Canvas.canvas.width / 2 > hero.X) {
-                Canvas.ctx.drawImage(imgLeft, this.X, this.Y);
-            } else {
+            if (rightPressed === true) {
                 Canvas.ctx.drawImage(imgRight, this.X, this.Y);
+            } else {
+                Canvas.ctx.drawImage(imgLeft, this.X, this.Y);
             }
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
