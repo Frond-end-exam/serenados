@@ -36,7 +36,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             if (score.count > 1 && score.count % 10 === 0) {
                 bonusLife();
             }
-            if (score.count > 10) {
+            if (score.count > 25) {
                 tv.y += tv.vy;
                 tv.draw();
                 angryMan.draw();
