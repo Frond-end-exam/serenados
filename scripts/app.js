@@ -19,10 +19,6 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             girls.draw();
             ball.draw();
             hero.draw();
-            tv.draw();
-            checkCoords();
-            angryMan.draw();
-            tv.y += tv.vy;
             ball.y += ball.vy;
             if (ball.y + ball.vy > H - ball.radius || ball.y + ball.vy < ball.radius) {
                 newFallingElement();
@@ -39,6 +35,12 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             }
             if (score.count > 1 && score.count % 10 === 0) {
                 bonusLife();
+            }
+            if (score.count > 10) {
+                tv.y += tv.vy;
+                tv.draw();
+                angryMan.draw();
+                checkCoords();
             }
             if (tv.y + tv.vy > H - tv.radius || tv.y + tv.vy < tv.radius) {
                 newFallingTV();
