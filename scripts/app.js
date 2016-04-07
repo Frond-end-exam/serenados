@@ -12,16 +12,15 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             time++;
             if (time % 1000 === 0) {
                 changeDayNight();
-    
-                }
+            }
             $(".lives3").text(lives.count);
             $(".scoreCount").text(score.count);
             clearCanvas();
             girls.draw();
             ball.draw();
             hero.draw();
-            angryMan.draw();
             tv.draw();
+            angryMan.draw();
             tv.y += tv.vy;
             ball.y += ball.vy;
             if (ball.y + ball.vy > H - ball.radius || ball.y + ball.vy < ball.radius) {
@@ -53,7 +52,6 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
                 gameOverSound();
                 gameOverMenu();
             }
-            
         }, 10);
     });
 });

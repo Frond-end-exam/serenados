@@ -3,16 +3,10 @@ define(['components/models/canvas', 'components/models/tv', 'components/models/a
 
     function newFallingTV() {
   
-        var randomNumber = Math.floor((Math.random() * 2) + 1);
         tv.x = randomX();
         tv.y = randomY();
         angryMan.x = tv.x;
         angryMan.y = tv.y;
-        if (randomNumber === 1) {
-            tv.side = 1;
-        } else {
-            tv.side = 2;
-        }
         angryMan.draw();
         tv.draw();
     }

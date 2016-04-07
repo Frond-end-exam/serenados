@@ -22,32 +22,63 @@ define(['components/models/canvas'], function(Canvas) {
     }
     //-- ANIMATION --
     /*
-    var imgMan = new Image();
-    imgMan.src = "assets/images/moving-units/img-man.png";
+    var coin,
+        coinImage,
+        canvas;                 
 
-    function sprite(options) {
-        var that = {};
+    
+      coin.update();
+      coin.render();
+    
+    
+    function sprite (options) {
+    
+        
         that.context = options.context;
         that.width = options.width;
         that.height = options.height;
         that.image = options.image;
-        that.render = function() {
-            // Draw the animation
-            that.context.drawImage(that.image, 0, 0, that.width, that.height, 0, 0, that.width, that.height);
-        };
+        
+        
+          // Draw the animation
+          that.context.drawImage(
+            that.image,
+            frameIndex * that.width / numberOfFrames,
+            0,
+            that.width / numberOfFrames,
+            that.height,
+            0,
+            0,
+            that.width / numberOfFrames,
+            that.height);
+        }
+        
         return that;
     }
-    draImgMan = sprite({
-        width: 100,
+    
+    // Create sprite sheet
+    
+    coinImage = new Image();    
+    
+    // Create sprite
+    coin = sprite({
+        context: canvas.getContext("2d"),
+        width: 1000,
         height: 100,
-        image: imgMan
+        image: coinImage,
+        numberOfFrames: 10,
+        ticksPerFrame: 4
     });
-    */
+    
+    // Load sprite sheet
+    coinImage.addEventListener("load", gameLoop);
+    coinImage.src = "assets/images/moving-units/moving man/img-man.png";
+*/
     //--------------------------
     var imgLeft = new Image();
     var imgRight = new Image();
     imgLeft.src = "assets/images/moving-units/img-man-right.png";
-    imgRight.src = "assets/images/moving-units/img-man-left.png";
+    imgRight.src = "assets/images/moving-units/img-man-right.png";
     var hero = {
         height: 30,
         width: 70,
@@ -59,9 +90,9 @@ define(['components/models/canvas'], function(Canvas) {
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
             if (rightPressed && this.X < Canvas.canvas.width - this.width) {
-                this.X += 2;
+                this.X += 3;
             } else if (leftPressed && this.X > 0) {
-                this.X -= 2;
+                this.X -= 3;
             }
         }
     };
