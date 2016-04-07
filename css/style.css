@@ -21,6 +21,7 @@ body {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    background-image: url("../assets/images/backgrounds/buildingMain.gif");
 }
 
 .morning {
@@ -46,7 +47,7 @@ body {
     background-color: #665599;
     transition: all 0.5s ease-in-out;
 }
-
+ /*
 .canvasMorning {
     background-image: url("../assets/images/backgrounds/morningBuilding.gif");
 }
@@ -62,7 +63,7 @@ body {
 .canvasNight {
     background-image: url("../assets/images/backgrounds/nightBuilding.gif");
 }
-
+ */
 #menu {
     width: 100%;
     min-height: 650px;
@@ -107,7 +108,7 @@ body {
 #start {
     cursor: pointer;
     position: absolute;
-    top: 397px;
+    top: 294px;
     padding: 15px;
     display: block;
     background: url("../assets/images/menu/play-button.gif");
@@ -121,7 +122,7 @@ body {
 #buttonDisc {
     cursor: pointer;
     position: absolute;
-    top: 500px;
+    top: 410px;
     margin: auto;
     display: block;
     padding: 15px;
@@ -135,6 +136,31 @@ body {
 
 #controls-description {
     background: url("../assets/images/controls-frame/controls-background.png")no-repeat;
+    display: none;
+    position: absolute;
+    width: 300px;
+    top: 400px;
+    left: 250px;
+    padding: 100px;
+}
+
+#buttonAuthors {
+    cursor: pointer;
+    position: absolute;
+    top: 525px;
+    margin: auto;
+    display: block;
+    padding: 15px;
+    background: url("../assets/images/authors-frame/img-authors-button.png");
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 94px;
+    border: none;
+    outline: none;
+}
+
+#authors-description {
+    background: url("../assets/images/authors-frame/img-authors-frame.png")no-repeat;
     display: none;
     position: absolute;
     width: 300px;
@@ -185,7 +211,8 @@ body {
     width: 50px;
     height: 40px;
     text-align: center;
-    color: white;
+    color: #523B03;
+    text-shadow: 0 0 0.2em #F87, 0 0 1em hsla(63, 100%, 57%, 0.58);
     font-size: 30px;
 }
 
@@ -208,6 +235,7 @@ body {
     width: 30px;
     height: 50px;
     text-align: center;
-    color: white;
+    color: #990C0C;
+    text-shadow: 0 0 0.2em #F87, 0 0 1em hsla(63, 100%, 57%, 0.58);
     font-size: 30px;
 }
