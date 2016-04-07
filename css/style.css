@@ -25,7 +25,7 @@ body {
 }
 
 .morning {
-    background-image: url("../assets/images/backgrounds/nightBackground.png");
+    background-image: url("../assets/images/backgrounds/morningBackground.png");
     background-color: #66d5cc;
     transition: all 0.5s ease-in-out;
 }
@@ -47,23 +47,7 @@ body {
     background-color: #665599;
     transition: all 0.5s ease-in-out;
 }
- /*
-.canvasMorning {
-    background-image: url("../assets/images/backgrounds/morningBuilding.gif");
-}
 
-.canvasDay {
-    background-image: url("../assets/images/backgrounds/dayBuilding.gif");
-}
-
-.canvasEvening {
-    background-image: url("../assets/images/backgrounds/eveningBuilding.gif");
-}
-
-.canvasNight {
-    background-image: url("../assets/images/backgrounds/nightBuilding.gif");
-}
- */
 #menu {
     width: 100%;
     min-height: 650px;
