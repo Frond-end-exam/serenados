@@ -12,3 +12,7 @@ gulp.task('jshint', function () {
 		.pipe(jshint.reporter(stylish))
 		.pipe(jshint.reporter('fail'));
 });
+
+gulp.task('watch', function () {
+	gulp.watch(['./scripts/*.js', './scripts/components/functions/*.js', './scripts/components/models/*.js'], ['jshint']);
+});
