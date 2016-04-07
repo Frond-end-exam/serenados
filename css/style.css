@@ -24,6 +24,9 @@ body {
     background-image: url("../assets/images/backgrounds/building.gif");
 }
 
+
+/* BACKGROUNDS */
+
 .morning {
     background-image: url("../assets/images/backgrounds/morningBackground.png");
     background-color: #66d5cc;
@@ -48,10 +51,13 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
+
+/* MENU */
+
 #menu {
     width: 100%;
     min-height: 650px;
-    background-image: url("../assets/images/backgrounds/img-menu-background.gif");
+    background-color: #d6f0ff;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
