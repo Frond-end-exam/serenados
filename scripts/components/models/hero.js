@@ -75,10 +75,6 @@ define(['components/models/canvas'], function(Canvas) {
     coinImage.src = "assets/images/moving-units/moving man/img-man.png";
 */
     //--------------------------
-    var imgLeft = new Image();
-    var imgRight = new Image();
-    imgLeft.src = "assets/images/moving-units/img-man-right.png";
-    imgRight.src = "assets/images/moving-units/img-man-right.png";
     var hero = {
         height: 30,
         width: 70,
@@ -86,7 +82,9 @@ define(['components/models/canvas'], function(Canvas) {
         Y: Canvas.canvas.height - 140,
         draw: function() {
             Canvas.ctx.beginPath();
-            Canvas.ctx.drawImage(imgRight, this.X, this.Y);
+            $(hero).addClass('hero');
+            //ctx.rect(this.height, this.width);
+            //Canvas.ctx.drawImage(hero, this.X, this.Y);
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
             if (rightPressed && this.X < Canvas.canvas.width - this.width) {

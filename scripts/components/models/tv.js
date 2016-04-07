@@ -2,7 +2,6 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
     "use strict";
     var tvImg = new Image();
     tvImg.src = "assets/images/moving-units/tv/tv.png";
-
     var tv = {
         x: randomX(),
         y: randomY(),
