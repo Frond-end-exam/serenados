@@ -1,4 +1,4 @@
-define(['components/models/canvas', 'components/models/heart', 'components/models/hero', 'components/models/score', 'components/models/lives', 'components/models/canvasHeight', 'components/functions/randomX', 'components/functions/randomY'], function(Canvas, heart, hero, score, lives, H, randomX, randomY) {
+define(['components/models/canvas', 'components/models/heart', 'components/models/hero', 'components/models/score', 'components/models/lives', 'components/models/canvasHeight', 'components/functions/randomX', 'components/functions/randomY', 'components/functions/touchHeartSound'], function(Canvas, heart, hero, score, lives, H, randomX, randomY, touchHeartSound) {
     "use strict";
 
     function bonusLife() {
@@ -14,6 +14,7 @@ define(['components/models/canvas', 'components/models/heart', 'components/model
             score.count++;
             heart.x = randomX();
             heart.y = randomY();
+            touchHeartSound();
         }
     }
     return bonusLife;
