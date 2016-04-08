@@ -1,6 +1,6 @@
 Gradueded project of Web UI initial course students.
 
-Yurii Kovalchuk, Nazarii Semchii, Jaroslav Vasyliv, Rostyslav Skyba & Roman Fedyshyn.
+Yurii Kovalchuk, Nazarii Semchii, Iaroslav Vasyliv, Rostyslav Skyba & Roman Fedyshyn.
 
 # http://frond-end-exam.github.io/serenados/
 
