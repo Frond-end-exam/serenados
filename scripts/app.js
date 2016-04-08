@@ -1,6 +1,5 @@
 define(['components/models/hero', 'components/models/canvas', 'components/models/fallobject', 'components/functions/randomX', 'components/functions/randomY', 'components/functions/clearCanvas', 'components/functions/menuSound', 'components/functions/gameOverSound', 'components/functions/gameSound', 'components/models/menu', 'components/models/heart', 'components/functions/touchBraSound', 'components/functions/touchCactusSound', 'components/functions/gameOverMenu', 'components/functions/newFallingElement', 'components/functions/bonusLife', 'components/models/girls', 'components/models/canvasWidth', 'components/models/canvasHeight', 'components/models/score', 'components/models/lives', 'components/functions/changeDayNight', 'components/models/angryMan', 'components/models/tv', 'components/functions/newFallingTV', 'components/functions/checkCoords', 'components/functions/touchTvSound'], function(hero, Canvas, ball, randomX, randomY, clearCanvas, menuSound, gameOverSound, gameSound, menu, heart, touchBraSound, touchCactusSound, gameOverMenu, newFallingElement, bonusLife, girls, W, H, score, lives, changeDayNight, angryMan, tv, newFallingTV, checkCoords, touchTvSound) {
     "use strict";
-    console.log(changeDayNight);
     menu();
     menuSound();
     $('#start').click(function() {
@@ -49,7 +48,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             if ((tv.y) > (hero.Y - hero.height) && (tv.x + tv.radius) > hero.X && (tv.x - tv.radius) < (hero.X + hero.width)) {
                 lives.count--;
                 newFallingTV();
-                touchTvSound ();
+                touchTvSound();
                 checkCoords();
             }
             if (lives.count === 0) {

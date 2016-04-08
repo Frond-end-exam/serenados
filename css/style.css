@@ -95,6 +95,9 @@ body {
     outline: none;
 }
 
+
+/* BUTTONS */
+
 #start {
     cursor: pointer;
     position: absolute;
