@@ -3,18 +3,14 @@ define(['components/models/canvas'], function(Canvas) {
 
     var rightPressed = false,
         leftPressed = false,
-        touchLeft = $('.left-btn'),
-        touchRight = $('.right-btn');
-
-
 
     $(document).keydown(keyDownHandler);
     $(document).keyup(keyUpHandler);
 
     function keyDownHandler(e) {
-        if (e.keyCode == 39 || touchRight.toggle()) {
+        if (e.keyCode == 39) {
             rightPressed = true;
-        } else if (e.keyCode == 37 || touchLeft.toggle()) {
+        } else if (e.keyCode == 37) {
             leftPressed = true;
         }
     }
@@ -47,14 +43,14 @@ define(['components/models/canvas'], function(Canvas) {
         Y: Canvas.canvas.height - 140,
         draw: function() {
             Canvas.ctx.beginPath();
-            if (rightPressed === true || touchRight.toggle ()) {
+            if (rightPressed === true) {
                 Canvas.ctx.drawImage(imgRight, this.X, this.Y);
-                if (rightPressed === true || touchRight.toggle()) {
+                if (rightPressed === true) {
                     Canvas.ctx.drawImage(imgRight1, this.X, this.Y);
                 }
             } else {
                 Canvas.ctx.drawImage(imgLeft, this.X, this.Y);
-                if (leftPressed === true || touchLeft.toggle()) {
+                if (leftPressed === true) {
                     Canvas.ctx.drawImage(imgLeft4, this.X, this.Y);
                 }
             }
