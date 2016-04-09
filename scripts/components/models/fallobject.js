@@ -8,7 +8,7 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
         x: randomX(),
         y: randomY(),
         radius: 15,
-        color: "#0095DD",
+        color: "red",
         vy: 2,
         draw: function() {
             Canvas.ctx.beginPath();
