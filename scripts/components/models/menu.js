@@ -4,17 +4,13 @@ define(['../functions/gameSound'], function(gameSound) {
 
 
         $('#buttonDisc').click(function() {
-            $('#controls-description').show();
+            $('#controls-description').toggle();
         });
-        $('#controls-description').click(function() {
-            $('#controls-description').hide();
-        });
+        
         $('#buttonAuthors').click(function() {
-            $('#authors-description').show();
+            $('#authors-description').toggle();
         });
-        $('#authors-description').click(function() {
-            $('#authors-description').hide();
-        });
+        
         $('#mute').click(function() {
             soundManager.mute();
             $('#mute').hide();
