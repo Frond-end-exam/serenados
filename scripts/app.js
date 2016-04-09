@@ -35,7 +35,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
             if (score.count > 1 && score.count % 10 === 0) {
                 bonusLife();
             }
-            if (score.count > 10) {
+            if (score.count > 20) {
                 tv.y += tv.vy;
                 tv.draw();
                 angryMan.draw();
@@ -51,7 +51,7 @@ define(['components/models/hero', 'components/models/canvas', 'components/models
                 touchTvSound();
                 checkCoords();
             }
-            if (score.count > 25) {
+            if (score.count > 50) {
                 rugbyBall.y += rugbyBall.vy;
                 rugbyBall.x += rugbyBall.vx;
                 rugbyBall.draw();
