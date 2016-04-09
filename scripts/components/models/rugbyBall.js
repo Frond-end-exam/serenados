@@ -5,7 +5,7 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
     var rugbyBall = {
         x: randomX(),
         y: randomY(),
-        radius: 15,
+        radius: 10,
         vy: 1.8,
         vx: 0.2,
         draw: function() {

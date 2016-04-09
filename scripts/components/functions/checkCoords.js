@@ -3,7 +3,8 @@ define(['components/models/canvas', 'components/models/angryMan', 'components/mo
 
     function checkCoords() {
   
-        if (girls.x == angryMan.x && girls.y == angryMan.y){
+
+        if (girls.x == angryMan.x && girls.y == angryMan.y || angryMan.x == rugbyPlayer.x && angryMan.y == rugbyPlayer.y){
             newFallingTV();
         }
          if (girls.x == rugbyPlayer.x && girls.y == rugbyPlayer.y || angryMan.x == rugbyPlayer.x && angryMan.y == rugbyPlayer.y){
