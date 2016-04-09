@@ -4,18 +4,25 @@
 <head>
 
     <meta charset="utf-8" />
+
     <title>Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <link href="css/style.css" rel="stylesheet" />
 
 </head>
 
 <body>
     <div class="day" id="main">
+        
         <div class="game-over-menu">
             <button class="menu-button"></button>
         </div>
+        
         <button id="mute"></button>
         <button id="unmute"></button>
+        
         <div class="game">
             <div>
 
@@ -32,8 +39,15 @@
             </div>
             <!-- Canvas should have width and height inline or in external css -->
             <canvas class="canvasDay" height="575px" id="canvas" width="566px">Sorry canvas is not supported</canvas>
+
+            <div class="touch-control">
+                <div class="left-btn"><i class="fa fa-arrow-circle-o-left"></i></div>
+                <div class="right-btn"><i class="fa fa-arrow-circle-o-right"></i></div>
+            </div>
         </div>
+        
         <div id="menu">
+            
             <img alt="img-menu-girl" class="img-menu-girl" src="assets/images/backgrounds/img-menu-girl.gif">
 
             <button id="start"></button>
@@ -45,6 +59,7 @@
             <div id="authors-description"></div>
 
         </div>
+
     </div>
     <!-- Add all of our frameworks -->
     <script src="lib/soundmanager2.js"></script>

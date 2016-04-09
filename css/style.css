@@ -24,6 +24,26 @@ body {
     background-image: url("../assets/images/backgrounds/building.gif");
 }
 
+.left-btn,
+.right-btn {
+    color: #fff;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.left-btn {
+    top: 83%;
+    left: 28%;
+}
+
+.right-btn {
+    top: 83%;
+    left: 59%;
+}
+
 
 /* BACKGROUNDS */
 
