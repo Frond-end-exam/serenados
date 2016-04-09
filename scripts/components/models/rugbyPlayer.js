@@ -7,7 +7,7 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
         y: rugbyBall.y,
         draw: function() {
             Canvas.ctx.beginPath();
-            Canvas.ctx.drawImage(rugbyPlayerImg, this.x - 42, this.y - 30);
+            Canvas.ctx.drawImage(rugbyPlayerImg, this.x - 42, this.y - 28);
             Canvas.ctx.fill();
             Canvas.ctx.closePath();
         }
