@@ -7,7 +7,7 @@ define(['components/models/canvas', 'components/functions/randomX', 'components/
         y: randomY(),
         radius: 10,
         vy: 1.8,
-        vx: 0.2,
+        vx: 0,
         draw: function() {
             Canvas.ctx.beginPath();
             Canvas.ctx.drawImage(rugbyBallImg, this.x - 20, this.y - 20);
