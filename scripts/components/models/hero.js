@@ -1,7 +1,9 @@
 define(['components/models/canvas'], function(Canvas) {
     "use strict";
+
     var rightPressed = false,
         leftPressed = false;
+
     $(document).keydown(keyDownHandler);
     $(document).keyup(keyUpHandler);
 
