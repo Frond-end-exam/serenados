@@ -162,6 +162,9 @@ body {
     padding: 100px;
 }
 
+
+/* MUTE */
+
 #mute {
     cursor: pointer;
     position: absolute;
@@ -185,6 +188,9 @@ body {
     outline: none;
 }
 
+
+/* LIVES */
+
 .lives {
     float: left;
     width: 100px;
@@ -192,14 +198,14 @@ body {
     padding-left: 15%;
 }
 
-.lives1 {
+.livesImg {
     float: left;
     width: 50px;
     height: 40px;
     background: url("../assets/images/moving-units/img-sombrero.png");
 }
 
-.lives3 {
+.livesCount {
     float: right;
     width: 50px;
     height: 40px;
@@ -208,6 +214,9 @@ body {
     text-shadow: 0 0 0.2em #F87, 0 0 1em hsla(63, 100%, 57%, 0.58);
     font-size: 30px;
 }
+
+
+/* SCORE */
 
 .score {
     float: right;
